@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Create Campaign - EcoConnect</title>
+    <link rel="stylesheet" href="../static/css/campaign.css" />
+  </head>
+  <body>
+    <header>
+      <!-- Header content if needed -->
+    </header>
+
+    <main>
+      <h1>Create Campaign</h1>
+      <form action="/submit_campaign" method="POST">
+        <label for="campaign_name">Campaign Name:</label><br />
+        <input
+          type="text"
+          id="campaign_name"
+          name="campaign_name"
+          required
+        /><br />
+
+        <label for="campaign_description">Campaign Description:</label><br />
+        <textarea
+          id="campaign_description"
+          name="campaign_description"
+          rows="4"
+          cols="50"
+          required
+        ></textarea
+        ><br />
+
+        <label for="start_date">Start Date:</label><br />
+        <input type="date" id="start_date" name="start_date" required /><br />
+
+        <label for="end_date">End Date:</label><br />
+        <input type="date" id="end_date" name="end_date" required /><br />
+
+        <label for="campaign_type">Campaign Type:</label><br />
+        <select id="campaign_type" name="campaign_type" required>
+          <option value="">Select Type</option>
+          <option value="Environmental Cleanup">Environmental Cleanup</option>
+          <option value="Tree Planting">Tree Planting</option>
+          <option value="Petition">Petition</option>
+          <option value="Education Campaign">Education Campaign</option>
+          <!-- Add more options as needed --></select
+        ><br />
+
+        <label for="location">Location:</label><br />
+        <input type="text" id="location" name="location" /><br />
+
+        <label for="target_participants">Target Participants:</label><br />
+        <input
+          type="number"
+          id="target_participants"
+          name="target_participants"
+        /><br />
+
+        <label for="campaign_image">Campaign Image:</label><br />
+        <input type="file" id="campaign_image" name="campaign_image" /><br />
+
+        <button type="submit">Submit</button>
+      </form>
+    </main>
+
+    <footer>
+      <!-- Footer content if needed -->
+    </footer>
+  </body>
+</html>

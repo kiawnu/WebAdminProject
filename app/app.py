@@ -108,6 +108,25 @@ def infoID(id) -> str:
 def checkout() -> str:
     return render_template("checkout.html")
 
+@app.route("/create_campaign")
+@login_required
+def create_campaign() -> str:
+    return render_template("create_campaign.html")
+
+@app.route("/join_campaign")
+@login_required
+def join_campaign() -> str:
+    return render_template("join_campaign.html")
+
+@app.route("/feed")
+@login_required
+def feed() -> str:
+    return render_template("feed.html")
+
+@app.route("/about")
+def about() -> str:
+    return render_template("about.html")
+
 
 @app.route("/store")
 @login_required
